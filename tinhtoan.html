@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<script type="text/javascript">
+function getValueA(){
+	return document.getElementById("valueA").value ;
+}
+function getValueB(){
+	return document.getElementById("valueB").value ;
+}
+function add(a, b){
+	return parseFloat(a) + parseFloat(b);
+}
+function sub(a, b){
+	return parseFloat(a) - parseFloat(b);
+}
+function mul(a, b){
+	return parseFloat(a) * parseFloat(b);
+}
+function div(a, b){
+	return parseFloat(a) / parseFloat(b);
+}
+function mod(a, b){
+	return parseFloat(a) % parseFloat(b);
+}
+function setResult(valueAssign){
+	document.getElementById("result").value= valueAssign ;
+	}
+</script>
+
+</head>
+
+<body>
+Number A: <input type="text" id="valueA"/> <br/>
+Number B: <input type="text" id="valueB"/> <br/>
+Result: <input type="text" id="result" disabled="disabled"/> <br/>
+
+<input type="button" value="+" onClick="setResult(add (getValueA(), getValueB()));" />
+<input type="button" value="-" onClick="setResult(sub (getValueA(), getValueB()));" />
+<input type="button" value="*" onClick="setResult(mul (getValueA(), getValueB()));" />
+<input type="button" value="/" onClick="setResult(div (getValueA(), getValueB()));" />
+<input type="button" value="%" onClick="setResult(mod (getValueA(), getValueB()));" />
+</body>
+</html>
